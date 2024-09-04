@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin: 100, 200, 300, 400, 500, 600, 700, 800, 900');
+@import url('https://fonts.googleapis.com/css?family=Lato: 100, 200, 300, 400, 500, 600, 700, 800, 900');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+
+
+:root
+{
+    /* Colors */
+    --yellow: #ffcc4a;
+    --green: #4eaf4e;
+    --black: #181818;
+    --lightblue: #f5f5f5;
+    --white: #fff;
+
+
+    /* TEXT COLORS */
+
+    /* Headings */
+    --heading-color: #1c1c1c;
+
+    /* Paragraphs */
+    --paragraph-color: #595566;
+
+    /* Ordered Lists */
+    --ol-color: #595566;
+
+    /* Unordered Lists */
+    --ul-color: #595566;
+
+    /* Quotes */
+    --quote-color: #fff;
+   
+
+    /* ICONS */
+    --icon-color: #ffcc4a;
+    --topbar-icon-color: #fff;
+   
+    /* Topbar */
+    --topbar-color: #fff;
+    --topbar-background-color: #181818;
+
+    /* Navbar */
+    --navbar-background-color: #515151;
+    --navbar-color: #fff;
+    --navbar-link-color: #fff;
+    --navbar-active-link-color: #5ab612;
+
+
+    /* Newsletter */
+    --newsletter-section-color: #fff;
+    --newsletter-background-color: #181818;
+    --newsletter-input-background-color: #fff;
+    --newsletter-input-color: #a9a9a9;
+
+
+    /* POPOVER */
+    --popover-background-color: #181818;
+    --popover-input-background-color: #fff;
+
+
+    /* OUR SERVICES */
+    --our-services-btn-color: #fff;
+    --our-services-btn-background-color: #181818;
+    --our-services-btn-border-color: #181818;
+
+    /* MORE NEWS */
+    --more-news-btn-background-color: #ffcc4a;
+
+    /* BOOK APPOINTMENT */
+    --book-appointment-btn-color: #181818;
+    --book-appointment-btn-background-color: #fff;
+
+    /* GO TO DASHBOARD */
+    --go-to-dashboard-btn-color: #181818;
+    --go-to-dashboard-btn-background-color: #ffcc4a;
+
+    /* SUBSCRIBE */
+    --subscribe-btn-color: #181818;
+    --subscribe-btn-background-color: #ffcc4a;
+
+    /* CALL */
+    --call-btn-color: #181818;
+    --call-btn-background-color: #fff;
+
+    /* FOOTER */
+    --footer-color: #fff;
+    --footer-list-headings-bottom-border-color: #ffcc4a;
+
+
+    /* FONT SIZES */
+
+    /* H1 */
+    --heading-one-font-size: clamp(1.25rem, 3.7772rem + -3.2609vw, 3.125rem);
+
+    /* H2 */
+    --heading-two-font-size: clamp(1.25rem, 3.356rem + -2.7174vw, 2.8125rem);
+
+    /* H3 */
+    --heading-three-font-size: clamp(1.25rem, 2.9348rem + -2.1739vw, 2.5rem);
+
+    /* H4 */
+    --heading-four-font-size: clamp(1.25rem, 2.5136rem + -1.6304vw, 2.1875rem);
+
+    /* H5 */
+    --heading-five-font-size: clamp(1.25rem, 2.0924rem + -1.087vw, 1.875rem);
+
+    /* H6 */
+    --heading-six-font-size: clamp(1.25rem, 1.6712rem + -0.5435vw, 1.5625rem);
+
+    /* Paragraph */
+    --paragraph-font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+
+    /* Ordered Lists */
+    --ol-font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+
+    /* Unordered Lists */
+    --ul-font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+
+    /* Quotes */
+    --quote-font-size: clamp(1.25rem, 2.2609rem + -1.3043vw, 2rem);
+
+    /* Buttons */
+    --btn-font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+
+    /* Footer List Headings */
+    --footer-list-heading-font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+
+
+    /* FONT WEIGHTS */
+
+    /* Headings */
+    --heading-font-weight: 600;
+
+    /* Paragraphs */
+    --paragraph-font-weight: 400;
+
+    /* Ordered Lists */
+    --ol-font-weight: 400;
+    
+    /* Unordered Lists */
+    --ul-font-weight: 400;
+
+    /* Quotes */
+    --quote-font-weight: 400;
+    
+    /* Buttons */
+    --btn-font-weight: 600;
+
+    /* Footer Lists */
+    --footer-list-font-weight: 600;
+
+    /* LINE HEIGHTS */
+
+    /* Headings */
+    --heading-line-height: 130%;
+
+    /* Paragraphs */
+    --paragraph-line-height: 147.5%;
+
+    /* Ordered Lists */
+    --ol-line-height: 214.5%;
+
+    /* Unordered Lists */
+    --ul-line-height: 214.5%;
+
+    /* Quotes */
+    --quote-line-height: 140%;
+
+    /* Footer Lists */
+    --footer-list-line-height: 116%;
+
+
+    /* RADII */
+    --base-border-radius: 10px;
+
+    /* BACKDROP FILTER */
+    --backdrop-filter: blur(21.5px);
+
+    /* HOVER STATES */
+
+    /* Our Services */
+    --our-services-btn-hover-color: #181818;
+    --our-services-btn-hover-background-color: #fff;
+
+    /* More News */
+    --more-news-btn-hover-color: #fff;
+    --more-news-btn-hover-background-color: #181818;
+}
+
+/* Headings Collectively */
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Cabin', sans-serif;
+    color: var(--heading-color);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-line-height);
+}
+
+/* Headings Individual */
+h1
+{
+    font-size: var(--heading-one-font-size);
+}
+
+h2
+{
+    font-size: var(--heading-two-font-size);
+}
+
+h3
+{
+    font-size: var(--heading-three-font-size);
+}
+
+h4
+{
+    font-size: var(--heading-four-font-size);
+}
+
+h5
+{
+    font-size: var(--heading-five-font-size);
+}
+
+h6
+{
+    font-size: var(--heading-six-font-size);
+}
+
+/* Paragraphs */
+p
+{
+    font-family: 'Lato', sans-serif;
+    color: var(--paragraph-color);
+    font-size: var(--paragraph-font-size);
+    font-weight: var(--paragraph-font-weight);
+}
+
+/* Ordered Lists */
+ol
+{
+    font-family: 'Lato', sans-serif;
+    font-size: var(--ol-font-size);
+    color: var(--ol-color);
+    font-weight: var(--ol-font-weight);
+    line-height: var(--ol-line-height);
+}
+
+/* Unordered Lists */
+ul
+{
+    font-family: 'Lato', sans-serif;
+    font-size: var(--ul-font-size);
+    color: var(--ul-color);
+    font-weight: var(--ul-font-weight);
+    line-height: var(--ul-line-height);
+}
+
+/* Buttons */
+button
+{
+    display: flex;
+    align-items: start;
+    font-family: 'Lato', sans-serif;
+    font-weight: var(--btn-font-weight);
+    font-size: var(--btn-font-size);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Inputs */
+input
+{
+    font-family: 'Cabin', sans-serif;
+    background-color: transparent;
+}
+
+/* Navigation */
+nav
+{
+   display: flex;
+   width: 1920px;
+   padding: 40px 360px;
+   align-items: center;
+   gap: 105px;
+}
+
+/* Links */
+a
+{
+    text-decoration: none;
+}
+
+
+/* CLASSES */
+.top-bar
+{
+    color: var(--topbar-color);
+    background-color: var(--topbar-background-color);
+}
+
+/* Active State */
+.active
+{
+    color: var(--navbar-active-link-color);
+}
+
+/* Newsletter */
+.newsletter
+{
+    color: var(--newsletter-section-color);
+    background-color: var(--newsletter-section-background-color);
+
+    /* Newsletter Input */
+    & .newsletter input
+    {
+        color: var(--newsletter-input-color);
+        padding: 22px 155px 22px 33px;
+    }
+}
+
+
+
+/* Popover */
+.popover
+{
+    border-radius: calc(var(--base-border-radius) * 3);
+    background-color: var(--popover-background-color);
+
+    /* Popover Input */
+    & .popover input
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 382px;
+        padding: 24px 33px;
+        background-color: var(--popover-input-background-color);
+        border-radius: calc(var(--base-border-radius) * 5.4);
+    }
+}
+
+
+
+/* Quotes */
+.quote
+{
+    font-family: 'Cabin', sans-serif;
+    font-size: var(--quote-font-size);
+    color: var(--quote-color);
+    font-weight: var(--quote-font-weight);
+    line-height: var(--quote-line-height);
+}
+
+
+/* Buttons */
+
+/* Our Services Btn */
+.our-services-btn
+{
+    padding: 16px 33px;
+    border: 2px solid var(--our-services-btn-border-color);
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--our-services-btn-color);
+    border: 2px solid var(--our-services-btn-border-color);
+    background-color: var(--our-services-btn-background-color);
+    transition: color .15s ease-in, background .15s ease-in;
+
+    & .our-services-btn:hover
+    {
+       color: var(--our-services-btn-hover-color);
+       background-color: var(--our-services-btn-hover-background-color);
+       transition: color .15s ease-in, background .15s ease-in;
+    }
+
+}
+
+
+/* More News Button */
+.more-news-btn
+{
+    padding: 16px 37px;
+    border: 2px solid var(--more-news-btn-border-color);
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--more-news-btn-color);
+    border: 2px solid var(--more-news-btn-border-color);
+    background-color: var(--more-news-btn-background-color);
+    transition: color .15s ease-in, background .15s ease-in;
+
+    & .more-news-btn:hover
+    {
+        color: var(--more-news-btn-hover-color);
+        background-color: var(--more-news-btn-hover-background-color);
+        transition: color .15s ease-in, background .15s ease-in;
+    }
+}
+
+
+/* Book Appointment Button */
+.book-appointment-btn
+{
+    padding: 16px 37px;
+    border: 2px solid var(--book-appointment-btn-border-color);
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--book-appointment-btn-color);
+    border: 2px solid var(--book-appointment-btn-border-color);
+    background-color: var(--book-appointment-btn-background-color);
+    transition: color .15s ease-in, background .15s ease-in;
+}
+
+/* Call Button */
+.call-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 41px 8px 10px;
+    color: var(--call-btn-color);
+    background-color: var(--call-btn-background-color);
+}
+
+/* Go To Dashboard Button */
+.go-to-dashboard-btn
+{
+    padding: 15px 56px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--go-to-dashboard-btn-color);
+    background-color: var(--go-to-dashboard-btn-background-color);
+}
+
+/* Subscribe Button */
+.subscribe-btn
+{
+    padding: 15px 45px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--subscribe-btn-color);
+    background-color: var(--subscribe-btn-background-color);
+}
+
+
+/* Footer List Headings */
+.footer-list-heading
+{ 
+    position: relative;
+    font-size: var(--footer-list-heading-font-size);
+    font-weight: var(--footer-list-font-weight);
+    border-radius: calc(var(--base-border-radius) * 2);
+
+    /* Footer List Headings Bottom Line */
+     & .footer-list-heading::after
+       {
+           content: '';
+           position: absolute;
+           bottom: -15px;
+           left: 0;
+           height: 5px;
+           width: 40px;
+           border-radius: calc(var(--base-border-radius) * 2);
+           background-color: var(--footer-list-headings-bottom-border-color);
+       }
+}
+
+
+
+/* Footer Bottom Text */
+.footer-bottom-text
+{
+    color: var(--footer-color);
+}
+
