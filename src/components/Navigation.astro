@@ -1,0 +1,60 @@
+---
+const {className, id, logoText} = Astro.props
+---
+
+<nav class={className} id={id}>
+    <h1 class="navbar-logo">
+        <a href="index.html">AskExperts</a>
+    </h1>
+
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="case_study.html">Case Study</a>
+        </li>
+        <li>
+            <a href="team.html">Team</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+    </ul>
+
+    <button class="btn login-btn">Login</button>
+</nav>
+
+<style>
+    nav
+    {
+        display: flex;
+        width: 100%;
+        padding: 38px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--navbar-background-color);
+
+        & .navbar-logo a
+        {
+            color: var(--navbar-color);
+        }
+
+        & ul li
+        {
+            display: inline-block;
+            margin-right: 20px;
+            
+            & a
+            {
+                color: var(--navbar-color);
+            }
+        }
+
+        .login-btn
+        {
+            color: var(--login-btn-color);
+            background-color: var(--login-btn-background-color);
+        }
+    }
+</style>

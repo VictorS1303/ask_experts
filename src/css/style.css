@@ -48,7 +48,7 @@
     --topbar-background-color: #181818;
 
     /* Navbar */
-    --navbar-background-color: #515151;
+    --navbar-background-color: #181818;
     --navbar-color: #fff;
     --navbar-link-color: #fff;
     --navbar-active-link-color: #5ab612;
@@ -90,6 +90,10 @@
     --call-btn-color: #181818;
     --call-btn-background-color: #fff;
 
+    /* LOGIN */
+    --login-btn-color: #181818;
+    --login-btn-background-color: #ffcc4a;
+
     /* FOOTER */
     --footer-color: #fff;
     --footer-list-headings-bottom-border-color: #ffcc4a;
@@ -129,6 +133,7 @@
 
     /* Buttons */
     --btn-font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+    --login-btn-font-size: clamp(1.108rem, 1.0586rem + 0.247vw, 1.25rem);
 
     /* Footer List Headings */
     --footer-list-heading-font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
@@ -284,16 +289,6 @@ input
     background-color: transparent;
 }
 
-/* Navigation */
-nav
-{
-   display: flex;
-   width: 1920px;
-   padding: 40px 360px;
-   align-items: center;
-   gap: 105px;
-}
-
 /* Links */
 a
 {
@@ -445,6 +440,17 @@ a
     border-radius: calc(var(--base-border-radius) * 4.2);
     color: var(--subscribe-btn-color);
     background-color: var(--subscribe-btn-background-color);
+}
+
+/* Login Button */
+.login-btn
+{
+    padding: 4px 16px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--login-btn-color);
+    background-color: var(--login-btn-background-color);
+    font-size: var(--login-btn-font-size);
+    font-weight: var(--login-btn-font-weight);
 }
 
 
