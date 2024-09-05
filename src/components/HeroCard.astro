@@ -1,0 +1,45 @@
+---
+import Card from './Card.astro'
+import Label from './Label.astro'
+
+const {className, id, headerText} = Astro.props
+---
+
+<Card>
+    <article class={className} id={id}>
+        <div>
+            <Label class="yellow" labelText="Hey" />
+        </div>
+        <h1>{headerText}</h1>
+    </article>
+</Card>
+
+<style>
+    article
+    {
+        padding: 48px 60px 58px 60px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgba(255, 255, 255, .85);
+        box-shadow: var(--box-shadow);
+        height: 300px;
+        width: 600px;
+        backdrop-filter: blur(5.5px);
+        border-radius: calc(var(--base-border-radius) * 2.9);
+        margin-left: 400px;
+    }
+
+    article > * + *
+    {
+        margin-top: 50px;
+    }
+
+    article header
+    {
+        color: #181818;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 116%;
+    }
+</style>
