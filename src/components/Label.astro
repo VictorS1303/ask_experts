@@ -1,0 +1,44 @@
+---
+const {class: color, labelText} = Astro.props
+---
+
+<label class:list={['label', `${color}`]}>
+    {labelText}
+</label>
+
+<style>
+    label
+    {
+        font-family: 'Lato', sans-serif;
+        font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+        display: flex;
+        width: 249px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 0px 12px;
+        border-radius: calc(var(--base-border-radius) * 5);
+        font-weight: 400;
+        line-height: 147.5%;
+        letter-spacing: 2.32px;
+        text-transform: uppercase;
+    }
+
+    .yellow
+    {
+        color: #181818;
+        background-color: #ffcc4a;
+    }
+
+    .green
+    {
+        color: #fff;
+        background-color: #4eaf4e;
+    }
+
+    .white
+    {
+        color: #181818;
+        background-color: #fff;
+    }
+</style>
