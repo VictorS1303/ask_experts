@@ -2,10 +2,8 @@
 const {className} = Astro.props
 ---
 
-<article class:list={[className]}>
-    <div>
-        <slot />
-    </div>
+<article class={className}>
+   <slot/>
 </article>
 
 <style>
@@ -18,8 +16,6 @@ const {className} = Astro.props
         align-items: center;
         gap: 10px;
         flex: 1 0 0;
-        backdrop-filter: blur(20px);
-        background-color: rgba(38, 38, 38, .6);
         height: 300px;
         width: 375px;
     }
