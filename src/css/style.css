@@ -96,6 +96,7 @@
 
     /* FOOTER */
     --footer-color: #fff;
+    --footer-background-color: #181818;
     --footer-list-headings-bottom-border-color: #ffcc4a;
 
 
@@ -199,6 +200,14 @@
     --more-news-btn-hover-color: #fff;
     --more-news-btn-hover-background-color: #181818;
 }
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+  
 
 /* Headings Collectively */
 h1, h2, h3, h4, h5, h6

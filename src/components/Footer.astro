@@ -1,0 +1,42 @@
+<footer class="footer" id="footer">
+    <h5>AskExperts</h5>
+    <div class="divider"></div>
+    <div class="footer-bottom">
+        <span>
+            ©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy
+        </span>
+    </div>
+</footer>
+
+<style>
+    footer
+    {
+        font-family: 'Cabin';
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        padding: 46px 8px;
+        background-color: var(--footer-background-color);
+
+        
+        & > *:not(.divider)
+        {
+            color: var(--footer-color);
+        }
+
+        & .divider
+        {
+            height: 3px;
+            background-color: #fff;
+            width: 80%;
+        }
+        
+        & .footer-bottom
+        {
+            font-size: var(--paragraph-font-size);
+        }
+    }
+</style>
