@@ -1,0 +1,112 @@
+---
+import Label from './Label.astro'
+const {className, id, questionText, answerText, headerText} = Astro.props
+---
+
+<article class={className} id={id}>
+    <header>
+        <Label class="green" labelText="FAQ"/>
+        <h1>{headerText}</h1>
+    </header>
+
+    <details>
+        <summary>
+            {questionText}
+        </summary>
+        <p>
+            {answerText}
+        </p>
+    </details>
+    <div class="divider"></div>
+</article>
+
+
+<style>
+    article
+    {
+        display: inline-flex;
+        padding: 151px 236px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        height: fit-content;
+        width: 400px;
+        background-color: #f5f5f5;
+        border-radius: calc(var(--base-border-radius) * 2);
+    }
+
+    article header ~ * + *
+    {
+        margin-top: 20px;
+    }
+
+    header
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: #181818;
+        text-align: center;
+        font-family: Cabin;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 116%;
+    }
+
+    h1
+    {
+        color: #181818;
+        text-align: center;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 116%;
+        white-space: nowrap;
+        margin: 20px 0;
+    }
+
+    .divider
+    {
+        width: 100%;
+        height: 1px;
+        background-color: #dadada;
+    }
+
+    details
+    {
+        width: 100%;
+        color: #181818;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 116%;
+    }
+
+    p
+    {
+        color: #595566;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 147.5%; /* 23.6px */
+    }
+
+    summary
+    {
+        cursor: pointer;
+    }
+
+    details, summary
+    {
+        font-family: 'Cabin', sans-serif;
+        
+    }
+
+    details[open] > summary
+    {
+        margin-bottom: 27px;
+    }
+</style>
