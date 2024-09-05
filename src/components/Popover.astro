@@ -1,0 +1,58 @@
+---
+import Input from '../components/Input.astro'
+const {className, id} = Astro.props;
+---
+
+<div popover class={className} id={id}>
+   <Input class="e-mail-input" placeholder="Enter E-mail" />
+   <Input class="password-input" placeholder="Enter Password" />
+
+   <a href="#" class="btn go-to-dashboard-btn">Go To Dashboard</a>
+</div>
+
+<style>
+    [popover]
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -300%;
+        background-color: var(--popover-background-color);
+        display: flex;
+        width: 450px;
+        padding: 40px 60px 60px 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 300px;
+        border-radius: calc(var(--base-border-radius) * 3);
+        transition: translate .6s ease-in;
+
+        & .go-to-dashboard-btn
+        {
+            font-family: 'Cabin';
+        }
+
+        &::backdrop
+        {
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: backdrop-filter .3s ease-in;
+        }
+
+        &:popover-open
+        {
+            translate: -50% -50%;
+            transition: translate .6s ease-in;
+            
+         
+            
+            &::backdrop
+            {
+                opacity: 1;
+                transition: opacity .3s ease-in;
+            }
+        }
+    }
+</style>

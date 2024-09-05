@@ -206,6 +206,7 @@ body
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
   
 
@@ -294,8 +295,9 @@ button
 /* Inputs */
 input
 {
+    display: block;
     font-family: 'Cabin', sans-serif;
-    background-color: transparent;
+    
 }
 
 /* Links */
@@ -335,22 +337,10 @@ a
 
 
 /* Popover */
-.popover
+[popover]
 {
     border-radius: calc(var(--base-border-radius) * 3);
     background-color: var(--popover-background-color);
-
-    /* Popover Input */
-    & .popover input
-    {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 382px;
-        padding: 24px 33px;
-        background-color: var(--popover-input-background-color);
-        border-radius: calc(var(--base-border-radius) * 5.4);
-    }
 }
 
 

@@ -1,5 +1,5 @@
 ---
-const {className, id, logoText} = Astro.props
+const {className, id} = Astro.props
 ---
 
 <nav class={className} id={id}>
@@ -22,7 +22,7 @@ const {className, id, logoText} = Astro.props
         </li>
     </ul>
 
-    <button class="btn login-btn">Login</button>
+    <button class="btn login-btn" popovertarget="login_popover">Login</button>
 </nav>
 
 <style>

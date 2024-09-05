@@ -1,0 +1,16 @@
+---
+const {className, id, placeholder} = Astro.props
+---
+
+<input class={className} id={id} placeholder={placeholder} />
+
+<style>
+    input
+    {
+        
+        width: 382px;
+        padding: 24px 33px;
+        background-color: var(--popover-input-background-color);
+        border-radius: calc(var(--base-border-radius) * 5.4);
+    }
+</style>
