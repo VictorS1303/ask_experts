@@ -1,0 +1,55 @@
+---
+const {percentage} = Astro.props
+---
+
+<div class="counter-container" style=`--${percentage}%`>
+    <div class="counter"></div>
+</div>
+
+<style>
+    @property --percent
+    {
+        syntax: "<percentage>";
+        inherits: true;
+        initial-value: 0%;
+    }
+
+    .counter-container
+    {
+        display: grid;
+        place-content: center;
+        --offset-pos: 5px;
+        animation: --pie 3s linear infinite;
+        border: var(--offset-pos) solid transparent;
+        background:
+            linear-gradient(#fff, #fff) padding-box,
+            conic-gradient(#fff var(--percent), #DAAE3C 0) border-box;
+        position: relative;
+        aspect-ratio: 1;
+        width: 150px;
+        border-radius: 1e5px;
+        margin-inline: auto;
+        
+        .counter
+        {
+    
+            border-radius: 99px;
+            width: 20px;
+            background: #181818;
+            position: absolute;
+            offset-path: border-box;
+            offset-distance: var(--percent);
+            offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
+            border: 5px solid #fff;
+        }
+    }
+
+    /* @keyframes --pie
+    {
+        to
+        {
+            --percent: 100%;
+        }
+    } */
+
+</style>
