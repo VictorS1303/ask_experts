@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.2"
+    "astro": "^4.15.2",
+    "astro-icon": "^1.1.1"
+  },
+  "devDependencies": {
+    "@iconify-json/fa6-solid": "^1.2.0"
   }
 }
