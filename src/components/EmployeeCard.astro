@@ -1,0 +1,69 @@
+---
+import Card from './Card.astro'
+import Label from './Label.astro'
+
+const {className, id, labelColor, labelText, imgSrc, imgAlt, employeeName, employeeDescription, social} = Astro.props
+---
+
+<Card>
+    <article class={className} id={id}>
+        <div class="employee-card-top">
+            <div class="label-container">
+                <Label class={labelColor} labelText={labelText} />
+            </div>
+            <img src={imgSrc} alt={imgAlt}>
+        </div>
+        <div class="employee-card-bottom">
+            <h5>
+                {employeeName} 
+            </h5>
+            <p>
+               {employeeDescription}
+            </p>
+
+            <div class="socials-container">
+                <i class={social}></i>
+            </div>
+        </div>
+    </article>
+</Card>
+
+
+<style>
+    article
+    {
+        width: 456px;
+        height: 682px;
+    }
+
+    .employee-card-top
+    {
+        position: relative;
+
+        & .label-container
+        {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        &  img
+        {
+            border-radius: calc(var(--base-border-radius) * 2);
+        }
+    }
+
+    .employee-card-bottom
+    {
+        margin-top: 25px;
+        text-align: center;
+
+        & p
+        {
+            margin: 13px 0 27px 0;
+        }
+    }
+   
+
+    
+</style>
