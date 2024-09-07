@@ -1,0 +1,117 @@
+---
+import Section from './Section.astro'
+import Label from './Label.astro'
+---
+
+<Section class="section home-expect-section" id="home_expect_section">
+    <div class="home-expect-wrap">
+        <div>
+            <img src="/public/images/expect.png" alt="">
+        </div>
+        <div>
+            <div>
+                <Label class="yellow" labelText="We'll work with you" />
+            </div>
+            
+            <h1>
+                What To Expect
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <ul>
+                <li>
+                    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day. 
+                </li>
+                <li>
+                    Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.
+                </li>
+            </ul>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .home-expect-wrap
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+        margin: 100px auto;
+
+        & > div p
+        {
+            width: 65ch;
+            line-height: 1.6
+        }
+
+        & > div:first-child
+        {
+            position: relative;
+
+            &::before
+            {
+                content: '';
+                position: absolute;
+                translate: -75px -75px;
+                width: 225px;  
+                height: 225px;
+                background-image: url('/public/images/pattern.png');
+                background-size: cover;
+                background-position: center;
+                z-index: -1;
+            }
+
+            &::after
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                translate: -30px -30px;
+                width: 164px;
+                height: 183px;
+                background-color: #4EAF4E;
+                border-radius: calc(var(--base-border-radius) * 3);
+                z-index: -1;
+            }
+        } 
+
+        & > div img
+        {
+            height: 450px;
+            width: 600px;
+            border-radius: calc(var(--base-border-radius) * 3);
+        }
+
+        & > div:last-child > * + *
+        {
+            margin: 10px 0 20px 0;
+        }
+
+        h1
+        {
+            font-size: calc(var(--heading-one-font-size) * 2);
+        }
+
+        ul
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        ul li
+        {
+            position: relative;
+            margin-left: 50px;
+            width: 65ch;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+    }  
+</style>
