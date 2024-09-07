@@ -48,7 +48,7 @@
     --topbar-background-color: #181818;
 
     /* Navbar */
-    --navbar-background-color: #181818;
+    --navbar-background-color: rgba(27, 27, 27, 0.91);
     --navbar-color: #fff;
     --navbar-link-color: #fff;
     --navbar-active-link-color: #5ab612;
@@ -287,7 +287,6 @@ button
     font-family: 'Lato', sans-serif;
     font-weight: var(--btn-font-weight);
     font-size: var(--btn-font-size);
-    
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -299,7 +298,6 @@ input
 {
     display: block;
     font-family: 'Cabin', sans-serif;
-    
 }
 
 /* Links */
@@ -313,10 +311,78 @@ img
     display: block;
     height: auto;
     width: 100%;
+    aspect-ratio: 1;
     object-fit: cover;
 }
 
 /* CLASSES */
+.btn
+{
+    font-family: 'Cabin', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Book Appointment Button */
+.book-appointment-btn
+{
+    font-family: 'Cabin';
+    padding: 16px 37px;
+    border: 2px solid var(--book-appointment-btn-border-color);
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--book-appointment-btn-color);
+    border: 2px solid var(--book-appointment-btn-border-color);
+    background-color: var(--book-appointment-btn-background-color);
+    width: fit-content;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .15s ease-in, background .15s ease-in;
+}
+
+/* Call Button */
+.call-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 41px 8px 10px;
+    color: var(--call-btn-color);
+    white-space: nowrap;
+    background-color: var(--call-btn-background-color);
+}
+
+/* Go To Dashboard Button */
+.go-to-dashboard-btn
+{
+
+    padding: 15px 56px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--go-to-dashboard-btn-color);
+    white-space: nowrap;
+    background-color: var(--go-to-dashboard-btn-background-color);
+}
+
+/* Subscribe Button */
+.subscribe-btn
+{
+    
+    padding: 15px 45px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--subscribe-btn-color);
+    background-color: var(--subscribe-btn-background-color);
+}
+
+/* Login Button */
+.login-btn
+{
+    padding: 4px 16px;
+    border-radius: calc(var(--base-border-radius) * 4.2);
+    color: var(--login-btn-color);
+    background-color: var(--login-btn-background-color);
+    font-size: var(--login-btn-font-size);
+    font-weight: var(--login-btn-font-weight);
+}
 .top-bar
 {
     color: var(--topbar-color);
@@ -370,12 +436,15 @@ img
 /* Our Services Btn */
 .our-services-btn
 {
+    font-family: 'Cabin', sans-serif;
     padding: 16px 33px;
     border: 2px solid var(--our-services-btn-border-color);
     border-radius: calc(var(--base-border-radius) * 4.2);
     color: var(--our-services-btn-color);
     border: 2px solid var(--our-services-btn-border-color);
     background-color: var(--our-services-btn-background-color);
+    white-space: nowrap;
+    cursor: pointer;
     transition: color .15s ease-in, background .15s ease-in;
 
     & .our-services-btn:hover
