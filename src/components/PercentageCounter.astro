@@ -2,7 +2,7 @@
 const {percentage} = Astro.props
 ---
 
-<div class="counter-container" style=`--${percentage}%`>
+<div class="counter-container" id="counter_container" style=`--percentage: ${percentage}`>
     <div class="counter"></div>
 </div>
 
@@ -32,7 +32,7 @@ const {percentage} = Astro.props
         
         .counter
         {
-    
+            aspect-ratio: 1;
             border-radius: 99px;
             width: 20px;
             background: #181818;
@@ -44,12 +44,12 @@ const {percentage} = Astro.props
         }
     }
 
-    /* @keyframes --pie
+    @keyframes --pie
     {
         to
         {
-            --percent: 100%;
+            --percent: 85%;
         }
-    } */
+    }
 
 </style>
