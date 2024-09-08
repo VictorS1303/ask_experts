@@ -1,0 +1,233 @@
+---
+import Section from './Section.astro'
+import Card from './Card.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class="section financial-section" id="financial_section">
+    <div class="financial-section-wrapper">
+
+        <div class="top">
+            <div class="descripttion">
+                <header>
+                    <Icon name="fa6-solid:chart-column" class="icon"/>
+                    <h2>Financial Projections</h2>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <div class="controls">
+                <Icon name="fa6-solid:arrow-left" class="arrow left-arrow" />
+                <Icon name="fa6-solid:arrow-right" class="arrow right-arrow" />
+            </div>
+        </div>
+
+
+        <div class="bottom">
+            <div class="container projection-cards-container">
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:table" class="icon table-icon"/>
+
+                        <header>
+                            <h3>The Balance Sheet</h4>     
+                        </header>
+                        <p>
+                            The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time.
+                        </p>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper active">
+
+                        <Icon name="fa6-solid:credit-card" class="icon table-icon"/>
+
+                        <header>
+                            <h3>Income Statement</h4>     
+                        </header>
+                        <p>
+                            The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)
+                        </p>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:building-columns" class="icon bank-icon"/>
+
+                        <header>
+                            <h3>Financial Plan</h4>     
+                        </header>
+                        <p>
+                            Keep your information current and review the documents on a regular basis (monthly or more often if needed). Review them with key individuals within your company.                        </p>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:sack-dollar" class="icon dollar-sack-icon"/>
+
+                        <header>
+                            <h3>Financial Ratios</h4>     
+                        </header>
+                        <p>
+                            Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.                        </p>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:sack-dollar" class="icon dollar-sack-icon"/>
+
+                        <header>
+                            <h3>Financial Ratios</h4>     
+                        </header>
+                        <p>
+                            Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.                        </p>
+                    </div>
+                </Card>
+                
+
+            </div>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .financial-section-wrapper
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        height: 800px;
+        background-color: #f5f5f5;
+        padding-top: 150px;
+
+        .top
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            
+            & h2
+            {
+                margin-top: 17px;
+            }
+
+            & p
+            {
+                margin-top: 30px;
+            }
+
+            & .icon
+            {
+                font-size: 4rem;
+            }
+
+            & header h2
+            {
+                font-size: calc(var(--heading-two-font-size) * 2);
+            }
+        }
+
+        & p
+        {
+            max-width: 65ch;
+        }
+
+        & .controls
+        {
+            display: flex;
+            gap: 30px;
+            
+
+            & .arrow
+            {
+                height: 30px;
+                width: 30px;
+                color: #181818;
+                background-color: #ffcc4a;
+                font-size: 16px;
+                padding: 15px;
+                border-radius: calc(var(--base-border-radius) * 5);
+                cursor: pointer;
+                transition: all .15s ease-in;
+
+                &:hover
+                {
+                    color: #ffcc4a;
+                    background-color: #181818;
+                    transition: all .15s ease-in;
+                }
+            }
+        }
+
+        & .bottom
+        {
+        }
+
+        & .bottom .container.projection-cards-container
+        {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: baseline;
+            grid-auto-columns: 25%;
+            gap: 80px;
+            margin-left: 200px;
+            overflow-x: auto;
+            overscroll-behavior-inline: contain;
+            scroll-snap-type: inline mandatory;
+
+            & > *
+            {
+                scroll-snap-align: end;
+            }
+        }
+
+        & .bottom .projection-card-wrapper
+        {
+            background-color: #ebebeb;
+            border-radius: calc(var(--base-border-radius) * 2);
+            padding: 44px 35px;
+            height: fit-content;
+        }
+
+        & .bottom .projection-card-wrapper.active
+        {
+            background-color: #181818;
+
+            & .icon
+            {
+                color: #ffcc4a;
+            }
+
+            & :is(header h3, p)
+            {
+                color: #fff;
+            }
+        }
+
+        
+
+        & .bottom .projection-card-wrapper .icon
+        {
+            width: 34px;
+            height: 26px;
+        }
+
+        & .bottom .projection-card-wrapper header
+        {
+            margin: 24px 0 10px 0;
+
+        }
+    }
+    
+</style>
