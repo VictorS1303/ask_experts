@@ -78,6 +78,10 @@
     --book-appointment-btn-color: #181818;
     --book-appointment-btn-background-color: #fff;
 
+    /* BOOK APPOINTMENT */
+    --get-in-touch-btn-color: #181818;
+    --get-in-touch-btn-background-color: #fff;
+
     /* GO TO DASHBOARD */
     --go-to-dashboard-btn-color: #181818;
     --go-to-dashboard-btn-background-color: #ffcc4a;
@@ -350,6 +354,23 @@ img
     color: var(--call-btn-color);
     white-space: nowrap;
     background-color: var(--call-btn-background-color);
+}
+
+/* Get In Touch Button */
+.get-in-touch-btn
+{
+    color: var(--get-in-touch-btn-color);
+    background-color: var(--get-in-touch-btn-background-color);
+}
+
+.read-more-btn
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--get-in-touch-btn-color);
+    background-color: transparent;
+    width: fit-content;
 }
 
 /* Go To Dashboard Button */

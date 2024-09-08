@@ -1,0 +1,194 @@
+---
+import Section from './Section.astro'
+import Card from './Card.astro'
+import Label from './Label.astro'
+import Button from './Button.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<Section class="section financial-section" id="financial_section">
+    <div class="financial-section-wrapper">
+
+        <div class="top">
+            <div class="descripttion">
+                <header>
+                    <Label class="yellow" labelText="Growing with our clients"/>
+                    <h2>Our core values & principles</h2>
+                </header>
+                <p>
+                    Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.                </p>
+            </div>
+
+            <div>
+                <Button href="#" class="btn get-in-touch-btn" buttonText="Get In Touch" />
+            </div>
+        </div>
+
+
+        <div class="bottom">
+            <div class="container projection-cards-container">
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:table" class="icon table-icon"/>
+
+                        <header>
+                            <h3>Creative Ideas</h4>     
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.
+                        </p>
+
+                        <a href="#" class="btn read-more-btn">
+                            <span>Read More</span> <Icon name="fa6-solid:arrow-right" /> 
+                        </a>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper active">
+
+                        <Icon name="fa6-solid:credit-card" class="icon table-icon"/>
+
+                        <header>
+                            <h3>Best Features</h4>     
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+
+                        <a href="#" class="btn read-more-btn">
+                            <span>Read More</span> <Icon name="fa6-solid:arrow-right" /> 
+                        </a>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:building-columns" class="icon bank-icon"/>
+
+                        <header>
+                            <h3>Experience</h4>     
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.
+                        </p>
+
+                        <a href="#" class="btn read-more-btn">
+                            <span>Read More</span> <Icon name="fa6-solid:arrow-right" /> 
+                        </a>
+                    </div>
+                </Card>
+
+                <Card class="projection-card">
+                    <div class="projection-card-wrapper">
+
+                        <Icon name="fa6-solid:sack-dollar" class="icon dollar-sack-icon"/>
+
+                        <header>
+                            <h3>Easy Solutions</h4>     
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+
+                        <a href="#" class="btn read-more-btn">
+                            <span>Read More</span> <Icon name="fa6-solid:arrow-right" /> 
+                        </a>
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .financial-section-wrapper
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 800px;
+        background-color: #181818;
+        padding-top: 150px;
+
+        .top
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 150px;
+            align-items: end;
+            
+            & h2
+            {
+                margin-top: 17px;
+            }
+
+            & p
+            {
+                color: #fff;
+                margin-top: 30px;
+            }
+
+            & .icon
+            {
+                font-size: 4rem;
+            }
+
+            & header h2
+            {
+                color: #fff;
+                font-size: calc(var(--heading-two-font-size) * 2);
+            }
+        }
+
+        & p
+        {
+            max-width: 65ch;
+        }
+
+        
+
+        & .bottom
+        {
+            padding: 0 100px;
+        }
+
+        & .bottom .container.projection-cards-container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        & .bottom .projection-card-wrapper
+        {
+            background-color: #ebebeb;
+            border-radius: calc(var(--base-border-radius) * 2);
+            padding: 44px 35px;
+            height: fit-content;
+        }
+
+               
+
+        & .bottom .projection-card-wrapper .icon
+        {
+            width: 34px;
+            height: 26px;
+        }
+
+        & .bottom .projection-card-wrapper header
+        {
+            margin: 24px 0 10px 0;
+        }
+
+
+        & .bottom .projection-card-wrapper p
+        {
+            margin: 20px 0;
+        }
+
+    }
+</style>
