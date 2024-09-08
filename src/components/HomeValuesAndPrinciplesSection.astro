@@ -6,8 +6,8 @@ import Button from './Button.astro'
 import { Icon } from 'astro-icon/components'
 ---
 
-<Section class="section financial-section" id="financial_section">
-    <div class="financial-section-wrapper">
+<Section class="section values-and-principles-section" id="values-and-principles_section">
+    <div class="values-and-principles-section-wrapper">
 
         <div class="top">
             <div class="descripttion">
@@ -26,12 +26,12 @@ import { Icon } from 'astro-icon/components'
 
 
         <div class="bottom">
-            <div class="container projection-cards-container">
+            <div class="container values-and-principles-cards-container">
 
-                <Card class="projection-card">
-                    <div class="projection-card-wrapper">
+                <Card class="values-and-principles-card">
+                    <div class="values-and-principles-card-wrapper">
 
-                        <Icon name="fa6-solid:table" class="icon table-icon"/>
+                        <Icon name="fa6-solid:lightbulb" class="icon table-icon"/>
 
                         <header>
                             <h3>Creative Ideas</h4>     
@@ -46,10 +46,10 @@ import { Icon } from 'astro-icon/components'
                     </div>
                 </Card>
 
-                <Card class="projection-card">
-                    <div class="projection-card-wrapper active">
+                <Card class="values-and-principles-card">
+                    <div class="values-and-principles-card-wrapper">
 
-                        <Icon name="fa6-solid:credit-card" class="icon table-icon"/>
+                        <Icon name="fa6-solid:chart-line" class="icon table-icon"/>
 
                         <header>
                             <h3>Best Features</h4>     
@@ -64,10 +64,10 @@ import { Icon } from 'astro-icon/components'
                     </div>
                 </Card>
 
-                <Card class="projection-card">
-                    <div class="projection-card-wrapper">
+                <Card class="values-and-principles-card">
+                    <div class="values-and-principles-card-wrapper">
 
-                        <Icon name="fa6-solid:building-columns" class="icon bank-icon"/>
+                        <Icon name="fa6-solid:earth-europe" class="icon bank-icon"/>
 
                         <header>
                             <h3>Experience</h4>     
@@ -82,10 +82,10 @@ import { Icon } from 'astro-icon/components'
                     </div>
                 </Card>
 
-                <Card class="projection-card">
-                    <div class="projection-card-wrapper">
+                <Card class="values-and-principles-card">
+                    <div class="values-and-principles-card-wrapper">
 
-                        <Icon name="fa6-solid:sack-dollar" class="icon dollar-sack-icon"/>
+                        <Icon name="fa6-solid:gear" class="icon dollar-sack-icon"/>
 
                         <header>
                             <h3>Easy Solutions</h4>     
@@ -105,7 +105,7 @@ import { Icon } from 'astro-icon/components'
 </Section>
 
 <style>
-    .financial-section-wrapper
+    .values-and-principles-section-wrapper
     {
         display: flex;
         flex-direction: column;
@@ -121,6 +121,12 @@ import { Icon } from 'astro-icon/components'
             padding: 0 150px;
             align-items: end;
             
+            & .get-in-touch-btn
+            {
+                padding: 10px 15px;
+                border-radius: calc(var(--base-border-radius) * 5);
+            }
+
             & h2
             {
                 margin-top: 17px;
@@ -156,14 +162,14 @@ import { Icon } from 'astro-icon/components'
             padding: 0 100px;
         }
 
-        & .bottom .container.projection-cards-container
+        & .bottom .container.values-and-principles-cards-container
         {
             display: flex;
             justify-content: center;
             align-items: baseline;
         }
 
-        & .bottom .projection-card-wrapper
+        & .bottom .values-and-principles-card-wrapper
         {
             background-color: #ebebeb;
             border-radius: calc(var(--base-border-radius) * 2);
@@ -173,19 +179,19 @@ import { Icon } from 'astro-icon/components'
 
                
 
-        & .bottom .projection-card-wrapper .icon
+        & .bottom .values-and-principles-card-wrapper .icon
         {
             width: 34px;
             height: 26px;
         }
 
-        & .bottom .projection-card-wrapper header
+        & .bottom .values-and-principles-card-wrapper header
         {
             margin: 24px 0 10px 0;
         }
 
 
-        & .bottom .projection-card-wrapper p
+        & .bottom .values-and-principles-card-wrapper p
         {
             margin: 20px 0;
         }
