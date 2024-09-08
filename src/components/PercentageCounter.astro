@@ -1,10 +1,14 @@
 ---
-const {percentage} = Astro.props
+const {percentage, counterText} = Astro.props
 ---
 
-<div class="counter-container" id="counter_container" style=`--percentage: ${percentage}`>
-    <div class="counter"></div>
-</div>
+<article>
+    <div class="counter-container" id="counter_container" style=`--percentage: ${percentage}`>
+        <div class="counter"></div>
+        <h2>{percentage}%</h2>
+    </div>
+    <h3>{counterText}</h3>
+</article>
 
 <style>
     @property --percent
@@ -12,6 +16,16 @@ const {percentage} = Astro.props
         syntax: "<percentage>";
         inherits: true;
         initial-value: 0%;
+    }
+
+    article
+    {
+        text-align: center;
+        
+        & h3
+        {
+            margin-top: 20px;
+        }
     }
 
     .counter-container
@@ -23,7 +37,7 @@ const {percentage} = Astro.props
         border: var(--offset-pos) solid transparent;
         background:
             linear-gradient(#fff, #fff) padding-box,
-            conic-gradient(#fff var(--percent), #DAAE3C 0) border-box;
+            conic-gradient(#fff var(--percent), transparent 0) border-box;
         position: relative;
         aspect-ratio: 1;
         width: 150px;

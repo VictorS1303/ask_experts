@@ -1,0 +1,61 @@
+---
+import Section from './Section.astro'
+import Label from './Label.astro'
+import PercentageCounter from './PercentageCounter.astro'
+---
+
+<Section class="section experience-section" id="experience_section">
+    <div class="experience-section-wrapper">
+        <div>
+            <Label class="white" labelText="Experience" />
+            
+            <header>
+                <h2>More than 25 years of experience</h2>
+            </header>
+
+            <p>
+                3000+ of our clients are insured around the world
+            </p>
+        </div>
+        <div>
+            <PercentageCounter percentage="85" counterText="Consistency"/>
+            <PercentageCounter percentage="95" counterText="Improvement"/>
+            <PercentageCounter percentage="90" counterText="Branching"/>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .experience-section-wrapper
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        height: 528.423px;
+        background-color: #fbc336;
+
+
+
+        & div:first-child * 
+        {
+            color: #181818;
+        }
+
+        & div:first-child header
+        {
+            margin: 22px 0 20px 0;
+        }
+
+        & div:first-child p
+        {
+            font-size: var(--paragraph-font-size);
+        }
+
+        & div:nth-child(2)
+        {
+            display: flex;
+            gap: 50px;
+        }
+    }
+</style>
