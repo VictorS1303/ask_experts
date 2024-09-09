@@ -103,6 +103,8 @@
     --footer-background-color: #181818;
     --footer-list-headings-bottom-border-color: #ffcc4a;
 
+    /* PADDING */
+    --content-width: 1200px;
 
     /* FONT SIZES */
 
@@ -207,12 +209,34 @@
 
 body
 {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    min-height: 100vh;
 }
+
+/* body
+{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+
+      [full-start] 1fr [content-start] minmax(0, 65ch) [content-end] 1fr [full-end];
+    gap: 1rlh;
+}
+
+header,
+footer,
+main
+{
+  grid-column: full;
+  display: grid;
+  grid-template-columns: subgrid;
   
+  > *
+  {
+    grid-column: content;
+  }
+} */
 
 /* Headings Collectively */
 h1, h2, h3, h4, h5, h6

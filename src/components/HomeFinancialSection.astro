@@ -81,21 +81,6 @@ import { Icon } from 'astro-icon/components'
                             Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.                        </p>
                     </div>
                 </Card>
-
-                <Card class="projection-card">
-                    <div class="projection-card-wrapper">
-
-                        <Icon name="fa6-solid:sack-dollar" class="icon dollar-sack-icon"/>
-
-                        <header>
-                            <h3>Financial Ratios</h4>     
-                        </header>
-                        <p>
-                            Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.                        </p>
-                    </div>
-                </Card>
-                
-
             </div>
         </div>
     </div>
@@ -172,6 +157,7 @@ import { Icon } from 'astro-icon/components'
 
         & .bottom
         {
+            
         }
 
         & .bottom .container.projection-cards-container
@@ -180,8 +166,8 @@ import { Icon } from 'astro-icon/components'
             grid-auto-flow: column;
             align-items: baseline;
             grid-auto-columns: 25%;
-            gap: 80px;
-            margin-left: 200px;
+            gap: 100px;
+            padding-inline: max(1rem, 50% - 1200px / 2);
             overflow-x: auto;
             overscroll-behavior-inline: contain;
             scroll-snap-type: inline mandatory;

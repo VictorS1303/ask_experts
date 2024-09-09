@@ -1,5 +1,7 @@
 ---
 import '../css/style.css'
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
 
 
 const {title} = Astro.props
@@ -13,6 +15,10 @@ const {title} = Astro.props
     <title>{title}</title>
 </head>
 <body>
-   <slot/>
+    <Navigation />
+    <main>
+        <slot/>
+    </main>
+    <Footer />
 </body>
 </html>

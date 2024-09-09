@@ -30,17 +30,20 @@ const {percentage, counterText} = Astro.props
 
     .counter-container
     {
+        --_offset-pos: 5px;
+        --_offset-distance: calc(var(--percentage) * 1%);
+
         display: grid;
         place-content: center;
-        --offset-pos: 5px;
         animation: --pie 3s linear infinite;
-        border: var(--offset-pos) solid transparent;
+        border: var(--_offset-pos) solid transparent;
         background:
             linear-gradient(#fff, #fff) padding-box,
-            conic-gradient(#fff var(--percent), transparent 0) border-box;
+            conic-gradient(red var(--_offset-distance), blue 0) border-box;
         position: relative;
         aspect-ratio: 1;
         width: 150px;
+
         border-radius: 1e5px;
         margin-inline: auto;
         
@@ -52,18 +55,17 @@ const {percentage, counterText} = Astro.props
             background: #181818;
             position: absolute;
             offset-path: border-box;
-            offset-distance: var(--percent);
+            offset-distance: var(--_offset-distance);
             offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
             border: 5px solid #fff;
         }
     }
 
-    @keyframes --pie
+    /* @keyframes --pie
     {
         to
         {
             --percent: 85%;
         }
-    }
-
+    } */
 </style>
