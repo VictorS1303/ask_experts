@@ -81,14 +81,14 @@ import Card from './Card.astro'
     .hero-wrapper
     {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         height: 600px;
         background-color: #181818;
         overflow: hidden;
+        /* padding-inline: max(1rem, 50% - var(--content-width) / 2); */
 
         & > *
         {
-            position: relative;
             flex: 1;
         }
 
@@ -121,7 +121,7 @@ import Card from './Card.astro'
             {
                 content: '';
                 position: absolute;
-                translate: 850px -50%;
+                translate: 850px -100%;
                 width: 200px;  
                 height: 200px;
                 background-image: url('/public/images/pattern.png');
@@ -144,6 +144,7 @@ import Card from './Card.astro'
         & img
         {
             height: 100%;
+            flex: 1;
         }
     }
 
@@ -153,7 +154,7 @@ import Card from './Card.astro'
         justify-content: center;
         align-items: center;
         padding: 0 200px;
-        margin-top: -200px;
+        margin-top: -150px;
 
      
         & .hero-card-wrapper
